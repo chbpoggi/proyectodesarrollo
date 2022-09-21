@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chiara Poggi Fotografía</title>
     <link rel="icon" href="../img/CHIARA POGGI (1).png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -14,11 +15,11 @@
     <header class="navBack">
         <div id="top">
             <img class="logo" src="../img/CHIARA POGGI (1).png" alt="logo sitio">
-            <h2>Chiara Poggi </h2>
-            <h5>Fotografía</h5>
+            <h2 class="galeTitulo">Chiara Poggi</h2>
+            <h5 class="galeSubtitulo">Fotografía</h5>
         </div>
         <nav>
-            <ul class="menu">
+            <ul class="menu1">
                 <li class="item"><a href="../index.html">Inicio</a></li>
                 <li class="item"><a href="../MENU/galeria.html">Galeria</a></li>
                 <li class="item">
@@ -35,7 +36,7 @@
         </nav>
     </header>
     <main>
-        <div class="gallery">
+        <div class="gallery" data-aos="zoom-in-up">
             <img src="../img/1.JPG" />
             <img src="../img/2.JPG" />
             <img src="../img/3.JPG" />
@@ -53,10 +54,10 @@
     <footer>
         <div>
             <ul>
-                <li><a href="http://instagram.com/chiarapoggifotografia" target="_blank"><img width="25px"
-                            src="../img/instagram.png" alt=""></a></li>
+                <li><a href="http://instagram.com/chiarapoggifotografia" target="_blank"><img width="15px"
+                            src="../img/instagram.png" alt="instagram"></a></li>
                 <li><a href="https://api.whatsapp.com/send?phone=+5491158718883&text=Hola%20Chiara" target="_blank"><img
-                            width="25px" src="../img/telefono blanco logo.png" alt="logotel" class="logotel"></a></li>
+                            width="15px" src="../img/telefono blanco logo.png" alt="logotel" class="logotel"></a></li>
 
             </ul>
         </div>
@@ -65,6 +66,10 @@
             <h5>Ir al top</h5>
         </a>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

@@ -93,7 +93,7 @@ nav {
 .menu .item {
     display: inline-block;
     position: relative;
-    font-size: 1.5rem;
+    /* font-size: 3rem; */
     text-align: center;
     padding: 0 25px;
     text-transform: uppercase;
@@ -148,6 +148,70 @@ nav {
     display: block;
     color: #053762;
 }
+
+.menu1 {
+    list-style-type: none;
+    padding: 0px 10px;
+}
+
+.menu1 .item {
+    display: inline-block;
+    position: relative;
+    /* font-size: 3rem; */
+    text-align: center;
+    padding: 0 25px;
+    text-transform: uppercase;
+    font-style: none;
+}
+
+.menu1 .submenu .sub_i {
+    display: block;
+    font-size: 1rem;
+    padding: auto;
+}
+
+.menu1 .item a {
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 35px;
+    font-size: 14px;
+}
+
+.menu1 .submenu {
+    position: absolute;
+    display: none;
+    background-color: white;
+    padding: 5px;
+    z-index: 999;
+    box-shadow: 0px 1px 5px 2px rgb(238, 238, 238);
+}
+
+.menu1 .item:hover .submenu {
+    display: block;
+    transition: all .3s ease 0s;
+}
+
+.menu1 .submenu .sub_i {
+    padding: 2px 0;
+    width: 200px;
+}
+
+.menu1 .submenu .sub_i a {
+    font-size: 11px;
+}
+
+.menu1 .item:hover a {
+    color: #c89b67;
+    background-color: #f0f8ff;
+    transition: all .3s ease 0s;
+}
+.menu1 .submenu .sub_i a:hover{
+    display: block;
+    color: #053762;
+}
 main{
     grid-area: main;
     display: flex;
@@ -167,6 +231,7 @@ main{
 }
 .sevilla{
     transition: all 2s;
+    width: 100%;
 }
 .sevilla:hover{
     border-radius: 35%;
@@ -176,11 +241,12 @@ section{
     background-color: bisque;
     text-align: center;
     margin-top: 80px;
-    padding: 90px;
+    padding: 10px;
 }
 footer {
     background-color: #000;
     display: flex;
+    position: fixed;
     justify-content: space-around;
     align-items: center;
     bottom: 0;
@@ -203,8 +269,8 @@ footer div ul li .logotel {
     display: flex;
     justify-content: space-between;
     height: 450px;
-    flex-direction: row;
-    width: 80%;
+    flex-direction: initial;
+    width: 100%;
     max-width: 1000px;
 }
 
@@ -212,8 +278,8 @@ footer div ul li .logotel {
     font-weight: bolder;
     margin: 0;
     position: relative;
-    top: 31%;
-    left: 26%;
+    top: 5%;
+    left: 50%;
     width: 50%;
     text-align: center;
     overflow: auto;
@@ -234,7 +300,6 @@ footer div ul li .logotel {
     float: left;
     height: 100%;
 }
-*/
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -247,6 +312,7 @@ footer div ul li .logotel {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 10px;
 }
 
 .gallery img {
@@ -275,7 +341,7 @@ footer div ul li .logotel {
 @media screen and (max-width: 768px) {
     .padre {  
         grid-template-columns: 1.5fr;
-        grid-template-rows: 0.5fr 2fr 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
         grid-auto-flow: row;
         grid-template-areas: 
         "header"
@@ -283,11 +349,27 @@ footer div ul li .logotel {
         "section"
         "footer"
     }
+    .menu .item{
+        padding: 0px 0px;
+        font-size: 0.5rem;
+        
+    }
+    .slogan {
+        font-size: 18px;
+        width: 100%;
+        top: 55%;
+    }
+    .gallery {
+        padding: 10px 10px 10px 10px;
+    }
+    .tamañoTexto{
+        font-size: 50%;
+    }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 410px) {
     .padre {  
         grid-template-columns: 1.5fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
         grid-auto-flow: row;
         grid-template-areas: 
         "header"
@@ -295,8 +377,52 @@ footer div ul li .logotel {
         "section"
         "footer"
     }
-}
-
-
-
-
+    .logo {
+        width: 15%;
+    }
+    .sobre {
+        font-weight: bolder;
+        margin: 0;
+        text-align: center;
+        overflow: auto;
+    }
+    .tamañoTexto{
+        font-size: 200%;
+    }
+    .subtitulo{
+        font-size: 150%;
+    }
+    .menu .item a{
+        padding: 0px 0px 25px 25px;
+        font-size: 200%;
+        justify-content: space-around;
+    }
+    .slogan {
+        font-size: 150%;
+        width: 500%;
+        top: 100%;
+        text-align: center;
+    }
+    .sevilla{
+        width: fit-content;
+        width: 275vh;
+    }
+    footer {
+        width: 100%;
+        height: 10%;
+    }
+    footer div ul li {
+        font-size: 25%;
+    }
+    .galeTitulo{
+        font-size: 100%;
+    }
+    .galeSubtitulo{
+        font-size: 75%;
+    }
+    .menu1 .item a{
+        padding: 0px 0px 25px 25px;
+        font-size: 20%;
+        justify-content: space-between;
+    }
+    }
