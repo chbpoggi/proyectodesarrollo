@@ -215,15 +215,16 @@ nav {
 main{
     grid-area: main;
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 .slogan {
-    font-size: 50px;
-    z-index: 999;
+    font-size: 2rem;
     color: black;
     width: 100%;
     text-align: center;
-    top: 55%;
-    position: absolute;
+    
 }
 .slogan .center {
     margin: 0 auto;
@@ -374,23 +375,19 @@ footer div ul li .logoInsta {
         font-size: 0.5rem;
         
     }
-    .slogan {
-        font-size: 18px;
-        width: 100%;
-        top: 45%;
-    }
+
     .gallery {
         padding: 10px 10px 10px 10px;
     }
     .tamañoTexto{
-        font-size: 50%;
+        font-size: 1rem;
     }
     
 }
 @media screen and (max-width: 425px) {
     .padre {  
-        grid-template-columns: 1.5fr;
-        grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
         grid-auto-flow: row;
         grid-template-areas: 
         "header"
@@ -401,51 +398,65 @@ footer div ul li .logoInsta {
     .logo {
         width: 15%;
     }
-    .sobre {
-        font-weight: bolder;
-        margin: 0;
-        text-align: center;
-        overflow: auto;
-    }
-    .tamañoTexto{
-        font-size: 200%;
-    }
-    .subtitulo{
-        font-size: 150%;
-    }
-    .menu .item a{
-        padding: 0px 0px 25px 25px;
-        font-size: 200%;
-        justify-content: space-around;
-    }
-    .slogan {
-        font-size: 300%;
-        width: 400%;
-        top: 80%;
-        text-align: center;
-    }
     
-    .sevilla{
-        width: fit-content;
-        width: 275vh;
-    }
+
+    
     footer {
         width: 100%;
-        height: 10%;
-
+        display: flex;
+        flex-direction: column;
     }
-    footer div ul li {
-        font-size: 25%;
+    
     }
-    .galeTitulo{
-        font-size: 100%;
-    }
-    .galeSubtitulo{
-        font-size: 75%;
-    }
-    .menu1 .item a{
-        padding: 0px 0px 25px 25px;
-        font-size: 20%;
-        justify-content: space-between;
-    }
-    }
+    @media screen and (max-width: 320px) {
+        .padre {  
+            display: grid;
+            row-gap: 1rem;
+            grid-template-columns: 1.5fr;
+            grid-template-rows: auto;
+            
+        }
+        
+        .logo {
+            width: 15%;
+        }
+        .sobre {
+            font-weight: bolder;
+            margin: 0;
+            text-align: center;
+            overflow: auto;
+        }
+        .slogan{
+            font-size: 1.5rem;
+        }
+        .menu .item a{
+            padding: 0px 0px 25px 25px;
+            font-size: 200%;
+            justify-content: space-around;
+        }
+        
+        
+        .sevilla{
+            width: 100%;
+            height: auto;
+        }
+        footer {
+            width: 100%;
+            height: 25%;
+    
+        }
+        footer div ul li {
+            font-size: 25%;
+        }
+        .galeTitulo{
+            font-size: 100%;
+        }
+        .galeSubtitulo{
+            font-size: 75%;
+        }
+        .menu1 .item a{
+            padding: 0px 0px 25px 25px;
+            font-size: 20%;
+            justify-content: space-between;
+        }
+        }
